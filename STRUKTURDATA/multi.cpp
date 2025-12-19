@@ -60,7 +60,7 @@ void insertPasien(ListPasien &LS, adrPasien S) {
 
 void insertRelasi(ListRelasi &LR, adrRelasi R) {
     if (LR.first == nullptr) {
-        LR.first == R;
+        LR.first = R;
     } else {
         R->next = LR.first;
         LR.first = R;
@@ -294,3 +294,4 @@ void relasiPasienDanPenyakit(ListRelasi &LR, adrPasien P, adrPenyakit Q) {
 
     Q->info.jumlah++;
 }
+
