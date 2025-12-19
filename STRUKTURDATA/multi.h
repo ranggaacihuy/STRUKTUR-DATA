@@ -93,3 +93,4 @@ void showTop5Penyakit(const ListPenyakit &LP);
 void relasiPasienDanPenyakit(ListRelasi &LR, adrPasien P, adrPenyakit Q);
 
 #endif
+
