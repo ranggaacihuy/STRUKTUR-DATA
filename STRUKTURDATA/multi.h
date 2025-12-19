@@ -5,47 +5,47 @@
 #include <string>
 using namespace std;
 
+struct Penyakit;
+struct Pasien;
+struct elmPenyakit;
+struct elmPasien;
+struct elmRelasi;
+
 typedef Penyakit infotypeP;
 typedef Pasien infotypeS;
 typedef elmPenyakit* adrPenyakit;
 typedef elmPasien* adrPasien;
 typedef elmRelasi* adrRelasi;
 
-// node penyakit
 struct Penyakit {
     string namaPenyakit;
     int penderita;
 };
 
-// node pasien
 struct Pasien {
     string namaPasien;
     int umur;
     string alamat;
 };
 
-// node list penyakit
 struct elmPenyakit {
     infotypeP info;
-    elmPenyakit *next;
-    elmPenyakit *prev;
+    adrPenyakit next;
+    adrPenyakit prev;
 };
 
-// node list pasien
 struct elmPasien {
     infotypeS info;
-    elmPasien *next;
-    elmPasien *prev;
+    adrPasien next;
+    adrPasien prev;
 };
 
-// node list relasi
 struct elmRelasi {
     adrPasien pasien;
     adrPenyakit penyakit;
-    elmRelasi *next;
+    adrRelasi next;
 };
 
-// list
 struct ListPenyakit {
     adrPenyakit first;
     adrPenyakit last;
@@ -59,7 +59,6 @@ struct ListPasien {
 struct ListRelasi {
     adrRelasi first;
 };
-
 
 // create list
 void createListPenyakit(ListPenyakit &LP);
