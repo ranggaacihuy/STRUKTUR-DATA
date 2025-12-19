@@ -263,3 +263,4 @@ void relasiPasienDanPenyakit(ListRelasi &LR, adrPasien P, adrPenyakit Q) {
     insertRelasi(LR, R);
     Q->info.penderita++;
 }
+
