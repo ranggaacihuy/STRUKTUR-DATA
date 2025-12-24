@@ -18,6 +18,8 @@ int main() {
         cout << "3. Hubungkan Pasien & Penyakit\n";
         cout << "4. Tampilkan Semua Data\n";
         cout << "5. Top 5 Penyakit\n";
+        cout << "6. Hapus Pasien\n";
+        cout << "7. Hapus Penyakit\n";
         cout << "0. Keluar\n";
         cout << "Pilih: ";
         cin >> pilih;
@@ -63,6 +65,18 @@ int main() {
         }
         else if (pilih == 5) {
             showTop5Penyakit(LP);
+        }
+        else if (pilih == 6) {
+            string namaPasien;
+            cout << "Nama Pasien yang akan dihapus: ";
+            getline(cin, namaPasien);
+            deletePasien(LS, LR, namaPasien);
+        }
+        else if (pilih == 7) {
+            string namaPenyakit;
+            cout << "Nama Penyakit yang akan dihapus: ";
+            getline(cin, namaPenyakit);
+            deletePenyakit(LP, LR, namaPenyakit);
         }
 
     } while (pilih != 0);
